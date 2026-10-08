@@ -1,0 +1,14 @@
+{
+  "title": "OWASP SKF Session Hijacking through XSS",
+  "description": "A Flask application (login admin/admin) that stores a message per user and renders it unescaped. Its session cookie is not HttpOnly.",
+  "question": "Use a stored cross-site scripting payload to steal the session cookie and hijack the user's session.",
+  "category": "WEB",
+  "difficulty": 2,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "session-hijacking",
+    "xss",
+    "cookies",
+    "httponly"
+  ]
+}
