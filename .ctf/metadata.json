@@ -4,11 +4,5 @@
   "question": "Use a stored cross-site scripting payload to steal the session cookie and hijack the user's session.",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "session-hijacking",
-    "xss",
-    "cookies",
-    "httponly"
-  ]
+  "evidence_kind": "SECRET"
 }
