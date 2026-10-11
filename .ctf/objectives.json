@@ -1,0 +1,45 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Hijack the session through stored XSS and retrieve the flag (/ctf/flag).",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-session-hijacking-xss}",
+      "hints": [
+        "The stored message is rendered unescaped, and the session cookie lacks a protective flag.",
+        "Read about the HttpOnly cookie attribute."
+      ],
+      "steps": [
+        {
+          "key": "flag",
+          "title": "Find the missing attribute",
+          "prompt": "Which cookie attribute would stop scripts from reading the session cookie?",
+          "check": {
+            "answer": [
+              "httponly",
+              "http only",
+              "http-only"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "Which XSS type is used here?",
+          "check": {
+            "answer": [
+              "stored xss",
+              "stored",
+              "persistent xss",
+              "stored cross-site scripting"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
